@@ -6,7 +6,7 @@
 <title>মাহামুদা ট্রেডার্স – ফুরকান আলীর সারের দোকান, কচুয়া, লালপুর, নাটোর</title>
 <meta name="description" content="ইউরিয়া, টিএসপি, এমওপি, জিপসাম ও জিংক সার – সঠিক দামে, সঠিক পরামর্শে। কচুয়া কারিগরপাড়া, লালপুর, নাটোর।">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --green:#1d5c3a; --green-d:#123d26; --gold:#e8b230; --paper:#fbf7ec; --soil:#3a2a1b;
@@ -14,7 +14,7 @@
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{font-family:"Hind Siliguri","Noto Sans Bengali","Kalpurush",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;font-size:18px}
+body{font-family:"Noto Serif Bengali","Kalpurush","Siyam Rupali",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.8;font-size:17px}
 img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
@@ -38,18 +38,18 @@ nav a:hover{background:var(--green);color:#fff}
 
 /* hero slider */
 .hero{background:var(--green-d)}
-.slider{position:relative;overflow:hidden;max-width:1360px;margin:0 auto}
+.slider{position:relative;overflow:hidden;max-width:1160px;margin:0 auto}
 .track{display:flex;transition:transform .6s ease}
-.slide{min-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:44px 90px;color:#fff;align-items:center;min-height:470px}
+.slide{min-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:26px 84px 44px;color:#fff;align-items:center;min-height:340px}
 .slide .tag{display:inline-block;background:var(--gold);color:var(--soil);font-weight:700;padding:2px 14px;border-radius:3px;margin-bottom:12px}
-.slide h1,.slide h2{font-size:clamp(30px,5vw,52px);margin-bottom:10px}
-.slide p{font-size:20px;max-width:34ch;color:#e9f1e6}
+.slide h1,.slide h2{font-size:clamp(28px,4vw,40px);margin-bottom:8px}
+.slide p{font-size:18px;max-width:34ch;color:#e9f1e6}
 .slide .use{margin-top:16px;background:rgba(255,255,255,.1);border-left:5px solid var(--gold);padding:10px 14px;font-size:17px;max-width:42ch}
 .media{display:grid;gap:12px}
-.photo{aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#0c2a1a;border:2px solid rgba(255,255,255,.25)}
+.photo{aspect-ratio:16/8;border-radius:6px;overflow:hidden;background:#0c2a1a;border:2px solid rgba(255,255,255,.25)}
 .photo{position:relative}.photo svg{width:100%;height:100%;display:block}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .diagram{background:#fffdf4;border-radius:6px;padding:8px}
-.diagram svg{width:100%;height:auto;display:block}
+.diagram svg{width:100%;height:auto;max-height:170px;display:block}
 .sq{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border:3px solid var(--gold);background:var(--soil);color:var(--gold);font-size:28px;font-weight:700;border-radius:0;cursor:pointer;display:grid;place-items:center;z-index:3}
 .sq:hover{background:var(--gold);color:var(--soil)}
 .sq.prev{left:14px}.sq.next{right:14px}
@@ -103,14 +103,36 @@ footer{background:var(--soil);color:#e8dfc5;padding:28px 0;text-align:center;fon
 footer b{color:var(--gold)}
 
 .callbox{margin-top:20px;background:#fff;border:3px solid var(--green);border-left-width:10px;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}.callbox small{display:block;color:#6b624d;font-size:14px}.callbox strong{font-size:26px;color:var(--red);letter-spacing:.5px}.callbtn{background:var(--green);color:#fff;font-weight:700;text-decoration:none;padding:10px 22px;border:3px solid var(--green-d)}.callbtn:hover{background:var(--gold);color:var(--soil)}
+
+.burger{display:none;width:48px;height:48px;border:3px solid var(--green);background:var(--paper);cursor:pointer;padding:0;flex-direction:column;justify-content:center;align-items:center;gap:5px;border-radius:0}
+.burger span{display:block;width:24px;height:3px;background:var(--green);transition:.25s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+nav ul{align-items:center}
+.opentime{background:var(--gold);color:var(--soil);font-weight:700;padding:6px 12px;font-size:15px;border:2px solid var(--soil)}
+.navcall{background:var(--green);color:#fff}
+.navcall:hover{background:var(--red)}
+.phone-line{margin-top:10px;font-weight:700}
+.phone-line a{color:var(--red)}
 @media(max-width:900px){
-  .slide{grid-template-columns:1fr;padding:34px 20px 70px;min-height:0}
+  .burger{display:flex}
+  .nav .wrap{flex-direction:row;flex-wrap:wrap;align-items:center}
+  nav{display:none;width:100%;order:3}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:stretch;gap:4px;padding:8px 0 4px}
+  nav a{padding:12px 14px;border:2px solid var(--line);background:#fff}
+  .opentime{text-align:center}
+  .brand strong{font-size:21px}
+}
+@media(max-width:900px){
+  .slide{grid-template-columns:1fr;padding:24px 16px 72px;min-height:0}
   .sq{top:auto;bottom:10px;transform:none;width:46px;height:46px}
   .sq.prev{left:14px}.sq.next{right:14px}
   .owner-grid,.hk-grid,.igrid{grid-template-columns:1fr}
   .pgrid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:520px){.pgrid{grid-template-columns:1fr}.nav .wrap{flex-direction:column;align-items:flex-start}}
+@media(max-width:520px){.pgrid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.track{transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -125,9 +147,12 @@ footer b{color:var(--gold)}
 
 <header class="nav"><div class="wrap">
   <a class="brand" href="#top"><strong>মাহামুদা ট্রেডার্স</strong><span>প্রোঃ মোঃ ফুরকান আলী · সারের দোকান</span></a>
-  <nav aria-label="প্রধান মেনু"><ul>
+  <button class="burger" id="burger" aria-label="মেনু খুলুন" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  <nav aria-label="প্রধান মেনু" id="menu"><ul>
     <li><a href="#owner">মালিক</a></li><li><a href="#products">সার</a></li>
-    <li><a href="#halkhata">হালখাতা</a></li><li><a href="#info">ঠিকানা ও সময়</a></li>
+    <li><a href="#halkhata">হালখাতা</a></li><li><a href="#info">ঠিকানা</a></li>
+    <li class="opentime">🕒 খোলা: সকাল ৮টা – রাত ৮টা</li>
+    <li><a class="navcall phone-call" href="#info">📞 ফোন করুন</a></li>
   </ul></nav>
 </div></header>
 
@@ -156,7 +181,7 @@ footer b{color:var(--gold)}
       <li>সার প্রয়োগের সময় ও পরিমাণ নিয়ে বিনা খরচে পরামর্শ</li>
       <li>কৃষি কোম্পানির রিটেইলার প্রশিক্ষণে নিয়মিত অংশগ্রহণ</li>
     </ul>
-    <div class="callbox"><div><small>ফুরকান আলীর মোবাইল নম্বর</small><strong id="phone-text">০১৭XXXXXXXX</strong></div><a class="callbtn" id="phone-call" href="#info">📞 ফোন করুন</a></div>
+    <div class="callbox"><div><small>ফুরকান আলীর মোবাইল নম্বর</small><strong class="phone-text">০১৭XXXXXXXX</strong></div><a class="callbtn phone-call" href="#info">📞 ফোন করুন</a></div>
   </div>
 </div></section>
 
@@ -190,7 +215,7 @@ footer b{color:var(--gold)}
 <section class="info" id="info"><div class="wrap">
   <h2>ঠিকানা ও দোকান খোলার সময়</h2>
   <div class="igrid">
-    <div class="ibox"><h3>📍 ঠিকানা</h3><p>কচুয়া কারিগরপাড়া, লালপুর, নাটোর, রাজশাহী</p><p>প্রোঃ মোঃ ফুরকান আলী, কচুয়া বাজার</p></div>
+    <div class="ibox"><h3>📍 ঠিকানা</h3><p>কচুয়া কারিগরপাড়া, লালপুর, নাটোর, রাজশাহী</p><p>প্রোঃ মোঃ ফুরকান আলী, কচুয়া বাজার</p><p class="phone-line">📞 <a class="phone-call phone-text" href="#info">০১৭XXXXXXXX</a></p></div>
     <div class="ibox"><h3>🕒 খোলার সময়</h3><p>শনিবার – বৃহস্পতিবার<br>সকাল ৮টা – রাত ৮টা</p><p>শুক্রবার: দুপুর ২টা থেকে</p></div>
     <div class="ibox"><h3>এখন সময়</h3><div class="clock" id="clock">—</div><p id="open-state"></p></div>
   </div>
@@ -205,7 +230,7 @@ const arrow='<path d="M0 0 L16 8 L0 16Z" fill="#b3173a"/>';
 function box(x,y,w,h,fill,txt,col){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" stroke="#3a2a1b" stroke-width="3"/><text x="${x+w/2}" y="${y+h/2+7}" text-anchor="middle" font-size="22" font-weight="700" fill="${col||'#1d1a15'}">${txt}</text>`}
 function plant(x,c,s){return `<g transform="translate(${x},${190-s*0})"><rect x="-3" y="-${70*s}" width="6" height="${70*s}" fill="#2e7d32"/><ellipse cx="-20" cy="-${50*s}" rx="${22*s}" ry="${9*s}" fill="${c}"/><ellipse cx="20" cy="-${35*s}" rx="${22*s}" ry="${9*s}" fill="${c}"/><ellipse cx="0" cy="-${72*s}" rx="${9*s}" ry="${20*s}" fill="${c}"/></g>`}
 const soil='<rect x="0" y="190" width="420" height="50" fill="#6b4a2b"/>';
-const wrap=(inner)=>`<svg viewBox="0 0 420 240" role="img" font-family="Hind Siliguri,sans-serif">${inner}</svg>`;
+const wrap=(inner)=>`<svg viewBox="0 0 420 240" role="img" font-family="Noto Serif Bengali,serif">${inner}</svg>`;
 const wire=(x1,x2,y)=>`<line x1="${x1}" y1="${y}" x2="${x2-14}" y2="${y}" stroke="#b3173a" stroke-width="4"/><g transform="translate(${x2-16},${y-8})">${arrow}</g>`;
 
 const slides=[
@@ -217,7 +242,7 @@ const slides=[
    <text x="140" y="228" text-anchor="middle" font-size="18" fill="#fff">আগে: হলুদ</text><text x="310" y="228" text-anchor="middle" font-size="18" fill="#fff">পরে: সবুজ</text>`)},
  {tag:'ফসফরাস',name:'টিএসপি',en:'TSP',lead:'শিকড় মজবুত, ফুল-ফল বেশি।',
   use:'কখন দেবেন: জমি তৈরির শেষ চাষে বা বীজ বোনার আগে, মাটির সঙ্গে মিশিয়ে।',
-  img:'images/tsp.jpg',
+  img:'images/TSP.jpg',
   svg:wrap(`${soil}<text x="210" y="28" text-anchor="middle" font-size="22" font-weight="700" fill="#b3173a">টিএসপি দিলে শিকড় ছড়ায়</text>
    <rect x="95" y="100" width="6" height="90" fill="#2e7d32"/><ellipse cx="98" cy="96" rx="26" ry="10" fill="#1b8a3a"/>
    <path d="M98 190 L80 215 M98 190 L98 228 M98 190 L116 215" stroke="#e0c9a0" stroke-width="3" fill="none"/>
@@ -226,7 +251,7 @@ const slides=[
    <text x="98" y="48" text-anchor="middle" font-size="18" fill="#3a2a1b">আগে: কম শিকড়</text><text x="300" y="48" text-anchor="middle" font-size="18" fill="#3a2a1b"></text>`)},
  {tag:'পটাশ',name:'এমওপি',en:'MOP',lead:'গাছ শক্ত, দানা মোটা ও ভারী।',
   use:'কখন দেবেন: শেষ চাষে অর্ধেক, বাকি অর্ধেক ফুল আসার আগে।',
-  img:'images/mop.jpg',
+  img:'images/MOP.jpg',
   svg:wrap(`${soil}<text x="210" y="28" text-anchor="middle" font-size="22" font-weight="700" fill="#b3173a">এমওপি দিলে গাছ দাঁড়িয়ে থাকে</text>
    <g transform="rotate(-28 110 190)"><rect x="107" y="95" width="7" height="95" fill="#8d9a2e"/><ellipse cx="110" cy="90" rx="14" ry="26" fill="#cdb94a"/></g>
    <rect x="305" y="85" width="9" height="105" fill="#2e7d32"/><ellipse cx="309" cy="75" rx="18" ry="34" fill="#e8b230"/>
@@ -270,9 +295,14 @@ document.querySelector('.next').onclick=()=>{go(cur+1);auto()};
 document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){go(cur-1);auto()}if(e.key==='ArrowRight'){go(cur+1);auto()}});
 auto();
 
-/* ফোন নম্বর: পুরো ১১ অঙ্কের নম্বর এখানে বসান */
-const PHONE='017XXXXXXXX';
-if(/^01\d{9}$/.test(PHONE)){document.getElementById('phone-text').textContent=PHONE.replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);document.getElementById('phone-call').href='tel:+88'+PHONE}
+/* ফোন নম্বর */
+const PHONE='01768900210';
+document.querySelectorAll('.phone-text').forEach(el=>el.textContent=PHONE.replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]));
+document.querySelectorAll('.phone-call').forEach(el=>el.href='tel:+88'+PHONE);
+/* মোবাইল মেনু */
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'মেনু বন্ধ করুন':'মেনু খুলুন')};
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
 /* ---------- Dates: Bangla (Bangladesh revised), Hijri, English ---------- */
 const bnNum=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
 const bnMonths=['বৈশাখ','জ্যৈষ্ঠ','আষাঢ়','শ্রাবণ','ভাদ্র','আশ্বিন','কার্তিক','অগ্রহায়ণ','পৌষ','মাঘ','ফাল্গুন','চৈত্র'];
